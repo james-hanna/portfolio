@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+h1{
+    padding-top: 75px;
+    color:white;
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin: auto;
+    font-size: 45px;
+    letter-spacing: 10px;
+    
+}
+
+header{
+    background-image: url(images/background/EmergingTechnologies.jpg);
+    height: 200px;
+    
+}
+
+
+header p{
+    text-align: center;
+    margin: auto
+}
+
+main{
+    padding-top: 100px;
+    width: 550px;
+    margin: auto;
+}
+
+.subtext {
+    color:white;
+    font-size: 25px;
+    font-family: cursive;
+    padding-bottom: 20px;
+}
+
+.profile-picture{
+    margin-left: 75px;
+    border-radius: 150px;
+    border: 8px solid #000000;
+}
+
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0;
+}
+
+footer{
+    color: white;
+    margin: auto;
+    padding: 25px;
+    background-image: url(images/background/EmergingTechnologies.jpg);
+
+}
+
+a.link {color: black;}
+a.visited {color: black;}
+a.hover {color: black;}
+a.active {color: black;}
+
+main ul{
+    list-style-position: inside;
+    margin: 0;
+}
+main hr{
+    margin-top: 50px;
+    margin-bottom: 0;
+    border: 2px solid #000; 
+    width: 550px;
+    background-color: #e0e0e0;
+}
+body{
+    background-color: #e0e0e0
+}
+
+.about{
+    padding-top: 50px;
+}
