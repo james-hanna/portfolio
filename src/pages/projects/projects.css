@@ -1,22 +1,38 @@
-
-.project{
-    display: flex;
-    flex-direction: column;
+.project {
+  display: flex;
+  flex-direction: column;
 }
 
-p{
-    margin: auto;
+p {
+  margin: auto;
 }
 
-h1{
-    margin: auto;
+h1 {
+  margin: auto;
 }
 
-h3{
-    margin: auto;
+h3 {
+  margin: auto;
 }
 
-.project-img{
-    
+.project-img {
+  margin: auto;
+}
+.little-space{
+    margin-top: 2000px;
+}
+
+.space-taker {
+  margin-top: 6000px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 425px) {
+  .title-logo {
+      width: 80%;
+  }
+}
+.ok{
+    width: 20%;
     margin: auto;
 }

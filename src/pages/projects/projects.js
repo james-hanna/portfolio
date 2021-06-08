@@ -2,10 +2,14 @@ import React from "react";
 import styled, { css } from "styled-components";
 import Slide from "react-reveal/Slide";
 import makeCarousel from "react-reveal/makeCarousel";
+import Fade from "react-reveal/Fade"
+import logo from "../../images/projects-logo.png"
+import ok from "../../images/ok.jpg"
 import "./projects.css"
 
 const Projects = () => {
   const Container = styled.div`
+    background-color: white;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -80,10 +84,13 @@ const Projects = () => {
   const Carousel = makeCarousel(CarouselUI);
   const wait = 5000;
 
+
+
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <h1> Projects </h1>
+    <Fade up>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "100px"}}>
+        <img className="title-logo" src={logo} alt="projects pixel"></img>
       </div>
       <Carousel defaultWait={wait}>
       <Slide right>
@@ -171,9 +178,14 @@ const Projects = () => {
           </div>
         </Slide>
       </Carousel>
-      <div className="space-taker">
-
+      <div className="little-space">
+        <h3> just testing out the background and scroll!</h3>
       </div>
+      <div className="space-taker" >
+        <p>Wow, you made it all the way down here</p>
+        <img className="ok" src={ok} alt="rekt nerd"></img>
+      </div>
+      </Fade>
     </>
   );
 };
