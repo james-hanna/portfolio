@@ -5,7 +5,7 @@ import Home from "./pages/home";
 import About from "./pages/about/about";
 import Contact from "./pages/contact/contact";
 import Intro from "./pages/intro/intro"
-import Projects from "./pages/projects/Projects.js"
+import Projects from "./pages/projects/projects.js"
 import "./App.css"
 
 
