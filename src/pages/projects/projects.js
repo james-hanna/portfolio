@@ -82,7 +82,7 @@ const Projects = () => {
     </Container>
   );
   const Carousel = makeCarousel(CarouselUI);
-  const wait = 5000;
+  const wait = 15000;
 
 
 
@@ -92,7 +92,7 @@ const Projects = () => {
       <div style={{ display: "flex", justifyContent: "center", marginTop: "100px"}}>
         <img className="title-logo" src={logo} alt="projects pixel"></img>
       </div>
-      <Carousel defaultWait={wait}>
+      <Carousel defaultWait={wait} maxTurns={ 1 }>
       <Slide right>
           <div className="project">
             <a className="project-img" href="/">

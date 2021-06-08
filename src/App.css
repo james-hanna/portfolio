@@ -30,6 +30,6 @@ hr {
   }
 }
 .app-main-level{
-  background-image: url(/src/images/background-img-updated.png);
-  background-size: auto;
+  background-image: url(/src/images/background-img-updated-v2.png);
+  background-size: length;
 }
