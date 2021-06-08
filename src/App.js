@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route } from "react-router";
 import Navbar from "./components/Navbar";
 import Home from "./pages/home";
@@ -10,9 +10,11 @@ import "./App.css"
 
 
 export default function App() {
+  const [color, setColor] = useState("#fff")
+
   return (
-    <div className="app-main-level">
-      <Navbar />
+    <div className="app-main-level" style={{backgroundColor: color}}>
+      <Navbar setColor={setColor}/>
       <hr />
       <Switch>
         <Route path="/contact" component={Contact} />

@@ -87,7 +87,7 @@ const Projects = () => {
 
 
   return (
-    <>
+    <div className="test">
     <Fade up>
       <div style={{ display: "flex", justifyContent: "center", marginTop: "100px"}}>
         <img className="title-logo" src={logo} alt="projects pixel"></img>
@@ -186,7 +186,7 @@ const Projects = () => {
         <img className="ok" src={ok} alt="rekt nerd"></img>
       </div>
       </Fade>
-    </>
+    </div>
   );
 };
 
