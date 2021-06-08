@@ -16,16 +16,16 @@ export default function App() {
   
 
   return (
-    <div className="app-main-level" style={darkMode === false ? {backgroundColor: color} : {backgroundColor: "#191f42"}}>
+    <div className="app-main-level" style={darkMode === false ? {backgroundColor: color} : {backgroundColor: "#121212"}}>
       <Navbar setColor={setColor} darkMode={darkMode} setDarkMode={setDarkMode} />
       <hr />
       <Switch>
-        <Route path="/contact" component={Contact} />
-        <Route path="/about" component={About} />
+        <Route path="/contact" component={() => <Contact darkMode={darkMode} />} />
+        <Route path="/about" component={() => <About darkMode={darkMode} />} />
         <Route path="/projects" component={() => <Projects darkMode={darkMode} />} />
-        <Route path="/intro" component={Intro} />
+        <Route path="/intro" component={() => <Intro darkMode={darkMode} />} />
 
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={() => <Home darkMode={darkMode} />} />
       </Switch>
     </div>
   );
