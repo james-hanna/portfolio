@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Nav,
   NavLink,
@@ -6,16 +6,36 @@ import {
   NavMenu,
 } from "./NavbarElements";
 import logo from "../../images/slowerlittlesquid.gif";
+import darkLogo from "../../images/slowerlittlesquid-darkv2.gif"
+import debounce from "../../utils/debounce"
 
-const Navbar = ({setColor}) => {
+const Navbar = ({setColor, darkMode, setDarkMode}) => {
+
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = debounce(() => { 
+    const currentScrollPos = window.pageYOffset;
+    setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+    setPrevScrollPos(currentScrollPos);
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
+
+
+
+
   return (
     <>
-      <Nav>
-        <NavLink to="/">
-          <img src={logo} alt="logo"/>
+      <Nav style={{top: visible ? '0' : '-60px'}}>
+        <NavLink to="#">
+          <img src={darkMode === false ? logo : darkLogo} alt="logo" onClick={() => setDarkMode(!darkMode)}/>
         </NavLink>
         <Bars />
-        <NavMenu style={{position: "relative", left: "-48px" , margin: "auto"}}>
+        <NavMenu >
           <NavLink to="/intro" activeStyle onClick={() => setColor("#f0fff0")}>
             Intro
           </NavLink>

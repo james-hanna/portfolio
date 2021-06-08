@@ -3,7 +3,7 @@ import "./contact.css"
 
 const Contact = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "center", flexDirection:"column" }}>
+    <div style={{ display: "flex", justifyContent: "center", flexDirection:"column", marginTop: "100px" }}>
       <h1>contact me</h1>
       <div className="little-space-contact">
         <h3> just testing out the background and scroll!</h3>

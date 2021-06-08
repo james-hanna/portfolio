@@ -4,7 +4,7 @@ import "./home.css"
 
 const Home = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "center", flexDirection:"column" }}>
+    <div style={{ display: "flex", justifyContent: "center", flexDirection:"column", marginTop: "100px" }}>
       <Zoom>
         <h1> Home </h1>
       </Zoom>

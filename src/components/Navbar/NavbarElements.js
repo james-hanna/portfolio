@@ -3,9 +3,10 @@ import { NavLink as Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 export const Nav = styled.nav`
+  position: fixed;
+  transition: top 0.6s;
   background: white;
-  filter: alpha(opacity=0.6)
-  height: 40px;
+  width: 100%;
   display: flex;
   z-index: 10;
   }
@@ -42,6 +43,9 @@ export const Bars = styled(FaBars)`
 `;
 
 export const NavMenu = styled.div`
+  position: relative;
+  left: -48px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
