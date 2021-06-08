@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+
+* {
+  font-family: "Sora", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border-top: 1px dotted #949dd4;
+  width: auto;
+  margin: 0 5% 0 6%;
+}
+
+
+@media screen and (max-width: 1024px) {
+  hr {
+    margin: 0 5% 0 8%;
+  }
+}
+@media screen and (max-width: 768px) {
+  hr {
+    margin: 0 10% 0 10%;
+  }
+}
+@media screen and (max-width: 425px) {
+  hr {
+    margin: 0 17% 0 20%;
+  }
+}
+.app-main-level{
+  background-image: url(/src/images/background-img.png);
+  background-size: auto;
+}
