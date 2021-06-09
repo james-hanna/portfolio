@@ -5,10 +5,13 @@ import { FaBars } from "react-icons/fa";
 import logo from "../../images/slowerlittlesquid.gif";
 import darkLogo from "../../images/slowerlittlesquid-darkv2.gif";
 import debounce from "../../utils/debounce";
+import colorChangeLogo from "../../images/littlesquid-color-changing.gif";
 
 const Navbar = ({ setColor, darkMode, setDarkMode }) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [mnmo, setMnmo] = useState(false)
+  const [num, setNum] = useState(0);
 
   const handleScroll = debounce(() => {
     const currentScrollPos = window.pageYOffset;
@@ -36,6 +39,9 @@ const Navbar = ({ setColor, darkMode, setDarkMode }) => {
           width: 100%;
           display: flex;
           z-index: 10;
+          @media screen and (max-width: 768px) {
+            justify-content: space-between;
+          }
         `
       : styled.nav`
           position: fixed;
@@ -45,6 +51,9 @@ const Navbar = ({ setColor, darkMode, setDarkMode }) => {
           width: 100%;
           display: flex;
           z-index: 10;
+          @media screen and (max-width: 768px) {
+            justify-content: space-between;
+          }
         `;
 
   const NavLink =
@@ -82,7 +91,7 @@ const Navbar = ({ setColor, darkMode, setDarkMode }) => {
     darkMode === false
       ? styled(FaBars)`
           display: none;
-          color: rgba(255, 255, 255, 0.6);
+          color: #fff;
 
           @media screen and (max-width: 768px) {
             display: block;
@@ -109,7 +118,8 @@ const Navbar = ({ setColor, darkMode, setDarkMode }) => {
           }
         `;
 
-  const NavMenu = styled.div`
+  const NavMenu = mnmo === false? 
+   styled.div`
     position: relative;
     left: -48px;
     margin: auto;
@@ -120,7 +130,36 @@ const Navbar = ({ setColor, darkMode, setDarkMode }) => {
     @media screen and (max-width: 768px) {
       display: none;
     }
+  `:
+  styled.div`
+    @media screen and (max-width: 768px) {
+      margin: auto;
+      background-color: #1f1f1f;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      top: 65px;
+      &.active {
+        color: rgba(255, 255, 255, 0.87);
+        text-decoration: underline;
+      }
+    }
   `;
+
+  const colorChangeHandler = () => {
+    const colors = ["#DBC9E9", "#C9F4FB", "#C9EFCB", "#FFE7C9", "#FDC9C9"];
+    let max = colors.length;
+    if(num <= max - 1){
+      setNum(num + 1);
+    }else{
+      setNum(0);
+    }
+    setColor(colors[num]);
+  }
+
 
   return (
     <>
@@ -132,29 +171,36 @@ const Navbar = ({ setColor, darkMode, setDarkMode }) => {
             onClick={() => setDarkMode(!darkMode)}
           />
         </NavLink>
-        <Bars />
+        <Bars onClick={() => setMnmo(!mnmo)}/>
         <NavMenu>
-          <NavLink to="/intro" activeStyle onClick={() => setColor("#f0fff0")}>
+          <NavLink to="/intro" activeStyle >
             Intro
           </NavLink>
-          <NavLink to="/about" activeStyle onClick={() => setColor("#fffef0")}>
+          <NavLink to="/about" activeStyle >
             Who
           </NavLink>
           <NavLink
             to="/projects"
             activeStyle
-            onClick={() => setColor("#f0f8ff")}
           >
             What
           </NavLink>
           <NavLink
             to="/contact"
             activeStyle
-            onClick={() => setColor("#fff0f0")}
           >
             Contact Me
           </NavLink>
         </NavMenu>
+        {darkMode === false ? (
+          <NavLink to="#">
+            <img
+              src={colorChangeLogo}
+              alt="logo"
+              onClick={() => colorChangeHandler()}
+            />
+          </NavLink>
+        ) : null}
       </Nav>
     </>
   );

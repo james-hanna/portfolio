@@ -18,7 +18,7 @@ const Projects = ({ darkMode }) => {
       : styled.p`
           color: #fff;
         `;
-        
+
   const Container =
     darkMode === false
       ? styled.div`
@@ -214,11 +214,8 @@ const Projects = ({ darkMode }) => {
                   alt="project 2 placeholder"
                 />
               </a>
-              <h3>Project 2!</h3>
-              <p>
-                Really Wish I had some completed projects I could write about
-                here!
-              </p>
+              <h3>Whack-A-Mole</h3>
+              <p>I'll be starting this next</p>
               <p>
                 <a href="/">Link to Project</a>
               </p>
