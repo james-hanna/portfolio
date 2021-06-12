@@ -1,13 +1,21 @@
 import React from "react";
 import Zoom from "react-reveal/Zoom";
-import "./home.css"
-import darkModeLogo from "../../images/home-logo-dark.png"
+import "./home.css";
+import darkModeLogo from "../../images/home-logo-dark.png";
+import logo from "../../images/home-logo-light.png"
 
-const Home = () => {
+const Home = ({darkMode}) => {
   return (
-    <div style={{ display: "flex", justifyContent: "center", flexDirection:"column", marginTop: "100px" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        marginTop: "100px",
+      }}
+    >
       <Zoom>
-      <div
+        <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -16,7 +24,7 @@ const Home = () => {
         >
           <img
             className="title-logo"
-            src={darkModeLogo}
+            src={darkMode ? darkModeLogo : logo}
             alt="projects pixel"
           ></img>
         </div>

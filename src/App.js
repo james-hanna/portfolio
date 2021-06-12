@@ -18,12 +18,11 @@ export default function App() {
 
   return (
     <div className="app-main-level" style={darkMode === false ? {backgroundColor: color} : {backgroundColor: "#121212"}}>
-      <Navbar setColor={setColor} darkMode={darkMode} setDarkMode={setDarkMode} />
-      <hr />
+      <Navbar setColor={setColor} color={color} darkMode={darkMode} setDarkMode={setDarkMode} />
       <Switch>
         <Route path="/contact" component={() => <Contact darkMode={darkMode} />} />
         <Route path="/about" component={() => <About darkMode={darkMode} />} />
-        <Route path="/projects" component={() => <Projects darkMode={darkMode} />} />
+        <Route path="/projects" component={() => <Projects darkMode={darkMode} color={color}/>} />
         <Route path="/intro" component={() => <Intro darkMode={darkMode} />} />
 
         <Route path="/" exact component={() => <Home darkMode={darkMode} />} />

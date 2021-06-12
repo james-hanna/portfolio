@@ -1,148 +1,70 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
 import Slide from "react-reveal/Slide";
 import makeCarousel from "react-reveal/makeCarousel";
 import Fade from "react-reveal/Fade";
 import logo from "../../images/projects-logo.png";
 import darkModeLogo from "../../images/projects-logo-dark-v2.png";
 import useInterval from "../../utils/useIntervals";
+import {
+  Para,
+  DarkPara,
+  Container,
+  DarkContainer,
+  Children,
+  Arrow,
+  DarkArrow,
+  Dot,
+  DarkDot,
+  Dots,
+} from "./carousel-components.js";
 import ok from "../../images/ok.jpg";
 import "./projects.css";
 
-const Projects = ({ darkMode }) => {
-  const Para =
-    darkMode === false
-      ? styled.p`
-          color: #000;
-        `
-      : styled.p`
-          color: #fff;
-        `;
+const Projects = ({ darkMode, color }) => {
+  
+  const DarkCarouselUI = ({ position, total, handleClick, children }) => (
+    <DarkContainer>
+      <Children>
+        {children}
+        <DarkArrow onClick={handleClick} data-position={position - 1}>
+          {"<"}
+        </DarkArrow>
+        <DarkArrow right onClick={handleClick} data-position={position + 1}>
+          {">"}
+        </DarkArrow>
+      </Children>
+      <Dots>
+        {Array(...Array(total)).map((val, index) => (
+          <DarkDot key={index} onClick={handleClick} data-position={index}>
+            {index === position ? "● " : "○ "}
+          </DarkDot>
+        ))}
+      </Dots>
+    </DarkContainer>
+  );
 
-  const Container =
-    darkMode === false
-      ? styled.div`
-          background-color: white;
-          justify-content: center;
-          display: flex;
-          flex-direction: column;
-          border: 1px solid #949dd4;
-          position: relative;
-          overflow: hidden;
-          width: 85%;
-          max-width: 1280px;
-          margin: auto;
-          margin-top: 100px;
-          color: #949dd4;
-        `
-      : styled.div`
-          background-color: #2c2c2c;
-          justify-content: center;
-          display: flex;
-          flex-direction: column;
-          border: 15px solid #1f1f1f;
-          position: relative;
-          overflow: hidden;
-          width: 85%;
-          max-width: 1280px;
-          margin: auto;
-          margin-top: 100px;
-          color: rgba(255, 255, 255, 0.87);
-          border-radius: 25px;
-        `;
-  const Children = styled.div`
-    display: flex;
-    width: 100%;
-    position: relative;
-    height: 550px;
-  `;
-  const Arrow =
-    darkMode === false
-      ? styled.div`
-          text-shadow: 1px 1px 1px #fff;
-          color: #949dd4;
-          z-index: 100;
-          line-height: 550px;
-          text-align: center;
-          position: absolute;
-          top: 0;
-          width: 5%;
-          font-size: 2em;
-          cursor: pointer;
-          user-select: none;
-          ${(props) =>
-            props.right
-              ? css`
-                  left: 95%;
-                `
-              : css`
-                  left: 0%;
-                `}
-        `
-      : styled.div`
-          text-shadow: 1px 1px 1px #fff;
-          color: #b0bec5;
-          z-index: 100;
-          line-height: 550px;
-          text-align: center;
-          position: absolute;
-          top: 0;
-          width: 5%;
-          font-size: 2em;
-          cursor: pointer;
-          user-select: none;
-          ${(props) =>
-            props.right
-              ? css`
-                  left: 95%;
-                `
-              : css`
-                  left: 0%;
-                `}
-        `;
-  const Dot =
-    darkMode === false
-      ? styled.span`
-          font-size: 1.5em;
-          cursor: pointer;
-          color: #949dd4;
-          text-shadow: 1px 1px 1px #fff;
-          user-select: none;
-        `
-      : styled.span`
-          font-size: 1.5em;
-          cursor: pointer;
-          color: #b0bec5;
-          text-shadow: 1px 1px 1px #fff;
-          user-select: none;
-        `;
-  const Dots = styled.span`
-    justify-self: center;
-    text-align: center;
-    width: 100%;
-    z-index: 100;
-  `;
   const CarouselUI = ({ position, total, handleClick, children }) => (
     <Container>
       <Children>
         {children}
-        <Arrow onClick={handleClick} data-position={position - 1}>
+        <Arrow color={color} onClick={handleClick} data-position={position - 1}>
           {"<"}
         </Arrow>
-        <Arrow right onClick={handleClick} data-position={position + 1}>
+        <Arrow color={color} right onClick={handleClick} data-position={position + 1}>
           {">"}
         </Arrow>
       </Children>
       <Dots>
         {Array(...Array(total)).map((val, index) => (
-          <Dot key={index} onClick={handleClick} data-position={index}>
+          <Dot color={color} key={index} onClick={handleClick} data-position={index}>
             {index === position ? "● " : "○ "}
           </Dot>
         ))}
       </Dots>
     </Container>
   );
-  const Carousel = makeCarousel(CarouselUI);
+
+  const Carousel = makeCarousel(darkMode ? DarkCarouselUI : CarouselUI);
   const wait = 150000;
   const [count, setCount] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -271,7 +193,12 @@ const Projects = ({ darkMode }) => {
           <h3> just testing out the background and scroll!</h3>
         </div>
         <div className="space-taker">
-          <Para>Wow, you made it all the way down here</Para>
+          {darkMode ? (
+            <DarkPara>Wow, you made it all the way down here </DarkPara>
+          ) : (
+            <Para>Wow, you made it all the way down here</Para>
+          )}
+
           <img className="ok" src={ok} alt="rekt nerd"></img>
         </div>
       </Fade>
