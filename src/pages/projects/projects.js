@@ -65,7 +65,7 @@ const Projects = ({ darkMode, color }) => {
   );
 
   const Carousel = makeCarousel(darkMode ? DarkCarouselUI : CarouselUI);
-  const wait = 15000000;
+  const wait = 5000;
   
 
   return (
@@ -91,88 +91,9 @@ const Projects = ({ darkMode, color }) => {
                 <h1>Reservation Setter</h1>
               </div>
               <ReservationProjectDisplay />
-              {/*
-              <div className="project-content-container">
-                <div className="content">
-                  <ProjectCard />
-                </div>
-                <div className="content">
-                  <ProjectCard />
-                </div>
-                <div className="content">
-                  <ProjectCard />
-                </div>
-                <div className="content">
-                  <ProjectCard />
-                </div>
-              </div>
-              */}
-            </div>
-          </Slide>
-          <Slide right>
-            <div className="project">
-              <a className="project-img" href="/">
-                <img
-                  src="https://via.placeholder.com/400"
-                  alt="project 2 placeholder"
-                />
-              </a>
-              <h3>Whack-A-Mole</h3>
-              <p>I'll be starting this next</p>
-              <p>
-                <a href="/">Link to Project</a>
-              </p>
-              <p>
-                <a href="/">Link to Repository</a>
-              </p>
-            </div>
-          </Slide>
-          <Slide right>
-            <div className="project">
-              <a className="project-img" href="/">
-                <img
-                  src="https://via.placeholder.com/400"
-                  alt="project 3 placeholder"
-                />
-              </a>
-              <h3>Project 3!</h3>
-              <p>
-                I bet some actual project text would make this area look a lot
-                better!
-              </p>
-              <p>
-                <a href="/">Link to Project</a>
-              </p>
-              <p>
-                <a href="/">Link to Repository</a>
-              </p>
-            </div>
-          </Slide>
-          <Slide right>
-            <div className="project">
-              <a className="project-img" href="/">
-                <img
-                  src="https://via.placeholder.com/400"
-                  alt="project 4 placeholder"
-                />
-              </a>
-              <h3>Project 4!</h3>
-              <p>
-                I bet some actual project text would make this area look a lot
-                better!
-              </p>
-              <p>
-                <a href="/">Link to Project</a>
-              </p>
-              <p>
-                <a href="/">Link to Repository</a>
-              </p>
             </div>
           </Slide>
         </Carousel>
-        <div className="little-space">
-          <h3> just testing out the background and scroll!</h3>
-        </div>
         <div className="space-taker">
           {darkMode ? (
             <DarkPara>Wow, you made it all the way down here </DarkPara>

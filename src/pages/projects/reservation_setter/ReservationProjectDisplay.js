@@ -3,6 +3,7 @@ import addRes from "./screenshots/addRes.png";
 import addTable from "./screenshots/addTable.png";
 import dashboard from "./screenshots/dashboard.png";
 import search from "./screenshots/search.png";
+import github from "../../../images/GitHub-Mark-32px.png";
 
 export default function ReservationProjectDisplay() {
   const [open, setOpen] = useState(false);
@@ -99,10 +100,43 @@ export default function ReservationProjectDisplay() {
             </div>
           </div>
           <div className="project-description">
-            <p style={{ marginTop: "10px", marginLeft: "10px" }}>yo</p>
+            <div className="project-info-title">
+              <h4>Description:</h4>
+            </div>
+            <p>
+              This is an application used by restaurant employees to schedule
+              reservations.
+            </p>
           </div>
           <div className="links-to-project">
-            <p style={{ marginTop: "10px", marginLeft: "10px" }}>yo</p>
+            <div className="project-info-title">
+              <h4>Links:</h4>
+            </div>
+            <div className="link-icons">
+              <label>
+                Live example:
+                <button
+                  class="button"
+                  onClick={() =>
+                    window.open(
+                      "https://reservation-app-frontend.vercel.app/dashboard"
+                    )
+                  }
+                >
+                  <span class="icon">Try It Now!</span>
+                </button>
+              </label>
+              <label>
+                Repo:
+              <img
+                src={github}
+                alt="github icon"
+                onClick={() =>
+                  window.open("https://github.com/james-hanna/ReservationApp")
+                }
+              />
+              </label>
+            </div>
           </div>
         </div>
       </div>

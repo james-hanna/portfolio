@@ -1,14 +1,18 @@
 import styled, { css } from "styled-components";
 
 export const Para = styled.p`
+  display: flex;
+  justify-content: center;
   color: #000;
 `;
 export const DarkPara = styled.p`
+  display: flex;
+  justify-content: center;
   color: #fff;
 `;
 
 export const Container = styled.div`
-  background-color: rgba(255,255,255,0.87);
+  background-color: rgba(255, 255, 255, 0.87);
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -19,8 +23,8 @@ export const Container = styled.div`
   max-width: 1280px;
   margin: auto;
   margin-top: 100px;
-  color: rgba(0,0,0,0.87);
-  box-shadow: 0px 0px 0px 10px rgba(0,0,0,0.3);
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
 `;
 
@@ -44,14 +48,14 @@ export const Children = styled.div`
   width: 100%;
   position: relative;
   height: 550px;
-  @media screen and (max-width: 425px){
-    height: 1650px;
+  @media screen and (max-width: 425px) {
+    height: 2150px;
   }
 `;
 
 export const Arrow = styled.div`
   text-shadow: 1px 1px 1px #fff;
-  color: ${(props) => props.color? props.color : `rgba(0,0,0,0.3)`};
+  color: ${(props) => (props.color ? props.color : `rgba(0,0,0,0.3)`)};
   z-index: 2;
   line-height: 550px;
   text-align: center;
@@ -95,7 +99,7 @@ export const DarkArrow = styled.div`
 export const Dot = styled.span`
   font-size: 1.5em;
   cursor: pointer;
-  color: ${(props) => props.color? props.color : `rgba(0,0,0,0.3)`};
+  color: ${(props) => (props.color ? props.color : `rgba(0,0,0,0.3)`)};
   text-shadow: 1px 1px 1px #fff;
   user-select: none;
 `;
