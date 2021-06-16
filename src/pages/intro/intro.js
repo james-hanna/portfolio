@@ -15,7 +15,7 @@ const Intro = ({ darkMode }) => {
         marginTop: "100px",
       }}
     >
-      <Fade down>
+      <Fade top>
       <div
         style={{
           display: "flex",

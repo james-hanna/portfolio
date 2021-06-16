@@ -44,12 +44,15 @@ export const Children = styled.div`
   width: 100%;
   position: relative;
   height: 550px;
+  @media screen and (max-width: 425px){
+    height: 1500px;
+  }
 `;
 
 export const Arrow = styled.div`
   text-shadow: 1px 1px 1px #fff;
   color: ${(props) => props.color? props.color : `rgba(0,0,0,0.3)`};
-  z-index: 100;
+  z-index: 2;
   line-height: 550px;
   text-align: center;
   position: absolute;
@@ -70,7 +73,7 @@ export const Arrow = styled.div`
 export const DarkArrow = styled.div`
   text-shadow: 1px 1px 1px #fff;
   color: #b0bec5;
-  z-index: 100;
+  z-index: 2;
   line-height: 550px;
   text-align: center;
   position: absolute;
@@ -108,5 +111,5 @@ export const Dots = styled.span`
   justify-self: center;
   text-align: center;
   width: 100%;
-  z-index: 100;
+  z-index: 2;
 `;

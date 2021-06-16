@@ -55,9 +55,10 @@ export const Buttonz = styled(Link)`
 
 export const Bars = styled(FaBars)`
   display: none;
-  color: ${(props) => (props.darkMode ? `rgba(255, 255, 255, 0.6)` : `#000`)};
+
 
   @media screen and (max-width: 768px) {
+    color: ${(props) => (props.darkMode ? `rgba(255, 255, 255, 0.6)` : `#000`)};
     display: block;
     position: absolute;
     top: 0;
@@ -70,6 +71,7 @@ export const Bars = styled(FaBars)`
 
 export const NavMenu = styled.div`
   margin: auto;
+  left: ${(props) => props.darkMode ? `-48px` : `auto`};
   display: flex;
   position: relative;
   @media screen and (max-width: 768px) {

@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Slide from "react-reveal/Slide";
 import makeCarousel from "react-reveal/makeCarousel";
 import Fade from "react-reveal/Fade";
 import logo from "../../images/projects-logo.png";
 import darkModeLogo from "../../images/projects-logo-dark-v2.png";
-import useInterval from "../../utils/useIntervals";
 import {
   Para,
   DarkPara,
@@ -19,6 +18,7 @@ import {
 } from "./carousel-components.js";
 import ok from "../../images/ok.jpg";
 import "./projects.css";
+import ReservationProjectDisplay from "./reservation_setter/ReservationProjectDisplay.js"
 
 const Projects = ({ darkMode, color }) => {
   
@@ -65,20 +65,9 @@ const Projects = ({ darkMode, color }) => {
   );
 
   const Carousel = makeCarousel(darkMode ? DarkCarouselUI : CarouselUI);
-  const wait = 150000;
-  const [count, setCount] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const wait = 15000000;
+  
 
-  useInterval(
-    () => {
-      setCount(count + 1);
-    },
-    isPlaying ? 1000 : null
-  );
-  function clearHandler() {
-    setIsPlaying(false);
-    setCount(0);
-  }
   return (
     <div>
       <Fade up>
@@ -98,34 +87,26 @@ const Projects = ({ darkMode, color }) => {
         <Carousel defaultWait={wait} maxTurns={1}>
           <Slide right>
             <div className="project">
-              <div style={{ margin: "auto" }}>
-                <h2 style={{ marginTop: "50px" }}>
-                  Current Leader: AAA Time: 36
-                </h2>
-                <h3 style={{ marginTop: "25px" }}>
-                  Second Place: AAA Time: 39
-                </h3>
-                <h3 style={{ marginTop: "25px" }}>Third Place: AAA Time: 43</h3>
+              <div className="project-title-container">
+                <h1>Reservation Setter</h1>
               </div>
-              <h3 style={{ marginTop: "100px" }}>Scroll Races!</h3>
-              <p>
-                See just how fast you can scroll to the bottom. Can you make the
-                High Scores? Press Start! and start Scrolling!
-              </p>
-
-              <p>{count}</p>
-              <button
-                onClick={() => setIsPlaying(true)}
-                style={{ width: "50px", margin: "auto" }}
-              >
-                Start!
-              </button>
-              <button
-                onClick={() => clearHandler()}
-                style={{ width: "50px", margin: "auto" }}
-              >
-                Clear!
-              </button>
+              <ReservationProjectDisplay />
+              {/*
+              <div className="project-content-container">
+                <div className="content">
+                  <ProjectCard />
+                </div>
+                <div className="content">
+                  <ProjectCard />
+                </div>
+                <div className="content">
+                  <ProjectCard />
+                </div>
+                <div className="content">
+                  <ProjectCard />
+                </div>
+              </div>
+              */}
             </div>
           </Slide>
           <Slide right>
