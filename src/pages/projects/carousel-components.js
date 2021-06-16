@@ -45,7 +45,7 @@ export const Children = styled.div`
   position: relative;
   height: 550px;
   @media screen and (max-width: 425px){
-    height: 1500px;
+    height: 1650px;
   }
 `;
 

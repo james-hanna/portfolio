@@ -4,7 +4,6 @@ import addTable from "./screenshots/addTable.png";
 import dashboard from "./screenshots/dashboard.png";
 import search from "./screenshots/search.png";
 
-
 export default function ReservationProjectDisplay() {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
@@ -22,12 +21,12 @@ export default function ReservationProjectDisplay() {
             onClick={() => setOpen(!open)}
           />
           {open && (
-                <img
-                  src={dashboard}
-                  alt="full-size-img"
-                  className="full-size-img"
-                  onClick={() => setOpen(!open)}
-                />
+            <img
+              src={dashboard}
+              alt="full-size-img"
+              className="full-size-img"
+              onClick={() => setOpen(!open)}
+            />
           )}
         </div>
 
@@ -39,12 +38,12 @@ export default function ReservationProjectDisplay() {
             onClick={() => setOpen1(!open1)}
           />
           {open1 && (
-                <img
-                  src={addRes}
-                  alt="full-size-img"
-                  className="full-size-img"
-                  onClick={() => setOpen1(!open1)}
-                />
+            <img
+              src={addRes}
+              alt="full-size-img"
+              className="full-size-img"
+              onClick={() => setOpen1(!open1)}
+            />
           )}
         </div>
 
@@ -56,14 +55,12 @@ export default function ReservationProjectDisplay() {
             onClick={() => setOpen2(!open2)}
           />
           {open2 && (
-
-                <img
-                  src={addRes}
-                  alt="full-size-img"
-                  className="full-size-img"
-                  onClick={() => setOpen2(!open2)}
-                />
-
+            <img
+              src={addRes}
+              alt="full-size-img"
+              className="full-size-img"
+              onClick={() => setOpen2(!open2)}
+            />
           )}
         </div>
 
@@ -75,27 +72,37 @@ export default function ReservationProjectDisplay() {
             onClick={() => setOpen3(!open3)}
           />
           {open3 && (
-
-                <img
-                  src={addRes}
-                  alt="full-size-img"
-                  className="full-size-img"
-                  onClick={() => setOpen3(!open3)}
-                />
-
+            <img
+              src={addRes}
+              alt="full-size-img"
+              className="full-size-img"
+              onClick={() => setOpen3(!open3)}
+            />
           )}
         </div>
       </div>
       <div className="project-info-row">
         <div className="project-info-box">
           <div className="technology-used">
-            <p style={{marginTop: "10px", marginLeft: "10px"}}>yo</p>
+            <div className="project-info-title">
+              <h4>Stack Used:</h4>
+            </div>
+            <div className="make-me-a-row">
+              <div className="stack-titles">
+                <h5>Front-end:</h5>
+                <h5>Back-end:</h5>
+              </div>
+              <div className="stack-content">
+                <p>Node.js, Express.js, RESTful API Endpoints, Postgres</p>
+                <p> HTML5, CSS3, JavaScript ES6, React</p>
+              </div>
+            </div>
           </div>
           <div className="project-description">
-            <p style={{marginTop: "10px", marginLeft: "10px"}}>yo</p>
+            <p style={{ marginTop: "10px", marginLeft: "10px" }}>yo</p>
           </div>
           <div className="links-to-project">
-            <p style={{marginTop: "10px", marginLeft: "10px"}}>yo</p>
+            <p style={{ marginTop: "10px", marginLeft: "10px" }}>yo</p>
           </div>
         </div>
       </div>
