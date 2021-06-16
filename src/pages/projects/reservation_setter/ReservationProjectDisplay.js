@@ -3,7 +3,7 @@ import addRes from "./screenshots/addRes.png";
 import addTable from "./screenshots/addTable.png";
 import dashboard from "./screenshots/dashboard.png";
 import search from "./screenshots/search.png";
-import Draggable from "react-draggable";
+
 
 export default function ReservationProjectDisplay() {
   const [open, setOpen] = useState(false);
