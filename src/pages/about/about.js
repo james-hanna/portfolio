@@ -10,11 +10,11 @@ const About = ({ darkMode }) => {
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",
-        marginTop: "100px",
       }}
     >
       <div
         style={{
+          marginTop: "100px",
           display: "flex",
           justifyContent: "center",
         }}

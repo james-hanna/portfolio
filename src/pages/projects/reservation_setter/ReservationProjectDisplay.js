@@ -17,14 +17,14 @@ export default function ReservationProjectDisplay() {
         <div className="screenshot">
           <img
             src={dashboard}
-            alt="2cb"
+            alt="dashboard"
             className="upper-img"
             onClick={() => setOpen(!open)}
           />
           {open && (
             <img
               src={dashboard}
-              alt="full-size-img"
+              alt="full-size-dashboard"
               className="full-size-img"
               onClick={() => setOpen(!open)}
             />
@@ -34,14 +34,14 @@ export default function ReservationProjectDisplay() {
         <div className="screenshot">
           <img
             src={addRes}
-            alt="2cb"
+            alt="add reservation"
             className="upper-img"
             onClick={() => setOpen1(!open1)}
           />
           {open1 && (
             <img
               src={addRes}
-              alt="full-size-img"
+              alt="full-size-add-reservation"
               className="full-size-img"
               onClick={() => setOpen1(!open1)}
             />
@@ -51,14 +51,14 @@ export default function ReservationProjectDisplay() {
         <div className="screenshot">
           <img
             src={addTable}
-            alt="2cb"
+            alt="add table"
             className="upper-img"
             onClick={() => setOpen2(!open2)}
           />
           {open2 && (
             <img
-              src={addRes}
-              alt="full-size-img"
+              src={addTable}
+              alt="full-size-add-table"
               className="full-size-img"
               onClick={() => setOpen2(!open2)}
             />
@@ -74,8 +74,8 @@ export default function ReservationProjectDisplay() {
           />
           {open3 && (
             <img
-              src={addRes}
-              alt="full-size-img"
+              src={search}
+              alt="full-size-search"
               className="full-size-img"
               onClick={() => setOpen3(!open3)}
             />
@@ -104,8 +104,8 @@ export default function ReservationProjectDisplay() {
               <h4>Description:</h4>
             </div>
             <p>
-              This is an application used by restaurant employees to schedule
-              reservations.
+              This is an application used by restaurant employees to book/ seat/
+              edit/ cancel reservations. As well as general floor management.
             </p>
           </div>
           <div className="links-to-project">
@@ -113,29 +113,29 @@ export default function ReservationProjectDisplay() {
               <h4>Links:</h4>
             </div>
             <div className="link-icons">
-              <label>
-                Live example:
+              <div className="icon-set">
+                <label>Live example:</label>
                 <button
-                  class="button"
+                  className="button"
                   onClick={() =>
                     window.open(
                       "https://reservation-app-frontend.vercel.app/dashboard"
                     )
                   }
                 >
-                  <span class="icon">Try It Now!</span>
+                  <span className="icon">Try It Now!</span>
                 </button>
-              </label>
-              <label>
-                Repo:
-              <img
-                src={github}
-                alt="github icon"
-                onClick={() =>
-                  window.open("https://github.com/james-hanna/ReservationApp")
-                }
-              />
-              </label>
+              </div>
+              <div className="icon-set">
+                <label>Repo:</label>
+                <img
+                  src={github}
+                  alt="github icon"
+                  onClick={() =>
+                    window.open("https://github.com/james-hanna/ReservationApp")
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>

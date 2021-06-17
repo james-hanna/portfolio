@@ -18,10 +18,9 @@ import {
 } from "./carousel-components.js";
 import ok from "../../images/ok.jpg";
 import "./projects.css";
-import ReservationProjectDisplay from "./reservation_setter/ReservationProjectDisplay.js"
+import ReservationProjectDisplay from "./reservation_setter/ReservationProjectDisplay.js";
 
 const Projects = ({ darkMode, color }) => {
-  
   const DarkCarouselUI = ({ position, total, handleClick, children }) => (
     <DarkContainer>
       <Children>
@@ -50,13 +49,23 @@ const Projects = ({ darkMode, color }) => {
         <Arrow color={color} onClick={handleClick} data-position={position - 1}>
           {"<"}
         </Arrow>
-        <Arrow color={color} right onClick={handleClick} data-position={position + 1}>
+        <Arrow
+          color={color}
+          right
+          onClick={handleClick}
+          data-position={position + 1}
+        >
           {">"}
         </Arrow>
       </Children>
       <Dots>
         {Array(...Array(total)).map((val, index) => (
-          <Dot color={color} key={index} onClick={handleClick} data-position={index}>
+          <Dot
+            color={color}
+            key={index}
+            onClick={handleClick}
+            data-position={index}
+          >
             {index === position ? "● " : "○ "}
           </Dot>
         ))}
@@ -66,16 +75,21 @@ const Projects = ({ darkMode, color }) => {
 
   const Carousel = makeCarousel(darkMode ? DarkCarouselUI : CarouselUI);
   const wait = 5000;
-  
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+      }}
+    >
       <Fade up>
         <div
           style={{
+            marginTop: "100px",
             display: "flex",
             justifyContent: "center",
-            marginTop: "100px",
           }}
         >
           <img

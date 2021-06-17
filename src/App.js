@@ -7,6 +7,7 @@ import Contact from "./pages/contact/contact";
 import Intro from "./pages/intro/intro"
 import Projects from "./pages/projects/projects.js"
 import "./App.css"
+import Footbar from "./components/Footbar";
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
 
         <Route path="/" exact component={() => <Home darkMode={darkMode} />} />
       </Switch>
+      <Footbar color={color} darkMode={darkMode} />
     </div>
   );
 }

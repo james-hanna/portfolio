@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 /* NAV STYLING */
 
 export const Nav = styled.nav`
-  position: relative;
+  position: fixed;
   top: ${(props) => (props.visible ? "0" : "-65px")};
   background-color: ${(props) => (props.darkMode ? `#2c2c2c` : `white`)};
   transition: top 0.6s;

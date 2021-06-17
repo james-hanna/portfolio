@@ -6,13 +6,9 @@
 .project-img {
   margin: auto;
 }
-.little-space {
-  display: flex;
-  margin-top: 2000px;
-}
 
 .space-taker {
-  margin-top: 10000px;
+  margin-top: 6000px;
   display: flex;
   flex-direction: column;
 }
@@ -21,6 +17,7 @@
   height: 5%;
   width: 5%;
   margin: auto;
+  margin-bottom: 200px;
 }
 .project-title-container {
   display: flex;
@@ -126,18 +123,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: auto;
+  max-width: fit-content;
   z-index: 10;
 }
 .link-icons{
   display: flex;
-  justify-content: center;
   flex-direction: column;
   margin: auto;
+  margin-top: 0px;
 }
-.link-icons>label{
-  margin-bottom: 15px;
+.icon-set{
+  display: flex;
+  margin-bottom: 20px;
 }
+
 
 @media screen and (max-width: 425px) {
   .title-logo {

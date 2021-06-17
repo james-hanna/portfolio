@@ -2,3 +2,112 @@
     display: flex;
     margin-top: 2000px;
 }
+.welcome-layover{
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    z-index: 9;
+    height: 2000px;
+}
+.welcome-arrow-left-container{
+    position: fixed;
+    display: flex;
+    width: 400px;
+    height: 150px;
+    left: 1%;
+}
+.leftArrow{
+    width: 50%;
+}
+.rightArrow{
+    width: 50%;
+}
+.welcome-arrow-right-container{
+    position: fixed;
+    display: flex;
+    right: 1%;
+    width: 400px;
+    height: 150px;
+    justify-content: flex-end;
+}
+.welcome-images-container{
+    display: flex;
+}
+.left-arrow-description-box{
+    display: flex;
+    height: 100px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50px;
+    width: 50%;
+}
+.right-arrow-description-box{
+    display: flex;
+    height: 100px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50px;
+    width: 50%;
+}
+.left-arrow-description-box>p{
+    margin: auto;
+}
+.right-arrow-description-box>p{
+    margin: auto;
+}
+.got-it-button{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 425px){
+    .welcome-arrow-left-container{
+        flex-direction: column;
+        width: 180px;
+        margin-left: 30px;
+    }
+    .welcome-arrow-right-container{
+        flex-direction: column-reverse;
+        width: 180px;
+        margin-left: 30px;
+    }
+    .left-arrow-description-box{
+        display: flex;
+        width: 90%;
+    }
+    .right-arrow-description-box{
+        display: flex;
+        width: 90%;
+    }
+    .left-arrow-description-box>p{
+        font-size: small;
+    }
+    .right-arrow-description-box>p{
+        font-size: small;
+    }
+    .rightArrow{
+        margin-left: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .welcome-arrow-left-container{
+        flex-direction: column;
+        width: 360px;
+        margin-left: 30px;
+    }
+    .welcome-arrow-right-container{
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        width: 360px;
+        margin-right: 30px;
+    }
+
+}
