@@ -30,7 +30,6 @@ const About = ({ darkMode }) => {
         <img src={workInProg} alt="Work in Progress" className="wipImg"/>
         </div>
       <div className="little-space-about">
-        <h3> just testing out the background and scroll!</h3>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const Contact = ({ darkMode }) => {
         />
       </div>
       <Fade top big>
-        <div className="contact-form-container">
+        <div className={darkMode ? `contact-form-container-dark` : `contact-form-container`} >
           <form action="https://formspree.io/f/xyybqazz" method="POST">
             <Fade top big delay={100}>
               <label for="contact-name">Name:</label>
