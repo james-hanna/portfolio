@@ -71,7 +71,6 @@ export const Bars = styled(FaBars)`
 
 export const NavMenu = styled.div`
   margin: auto;
-  left: ${(props) => props.darkMode ? `-48px` : `auto`};
   display: flex;
   position: relative;
   @media screen and (max-width: 768px) {

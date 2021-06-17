@@ -59,6 +59,16 @@
     width: 85%;
   }
 }
+@media screen and (min-width: 375px) {
+  .intro-first-para {
+    width: 85%;
+    height: 650px;
+  }
+  .intro-first-para-dark {
+    width: 85%;
+    height: 650px;
+  }
+}
 @media screen and (min-width: 425px) {
   .intro-first-para {
     width: 85%;
