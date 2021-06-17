@@ -73,6 +73,9 @@ export const NavMenu = styled.div`
   margin: auto;
   display: flex;
   position: relative;
+  @media screen and (min-width: 769px){
+    left: ${(props) => props.darkMode ? `-48px` : `auto`};
+  }
   @media screen and (max-width: 768px) {
     ${(props) =>
       props.mnmo
