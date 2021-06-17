@@ -9,11 +9,11 @@ export const Nav = styled.nav`
   background-color: ${(props) => (props.darkMode ? `#2c2c2c` : `white`)};
   transition: bottom 0.5s;
   width: 100%;
-  height: 200px;
+  height: 30px;
   display: flex;
   z-index: 10;
   border-top: ${(props) =>
-    props.darkMode ? `5px solid #1f1f1f` : `5px solid grey`};
+    props.darkMode ? `1px solid #1f1f1f` : `1px solid grey`};
 `;
 
 export const NavLink = styled(Link)`
