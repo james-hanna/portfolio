@@ -52,7 +52,7 @@ const Intro = ({ darkMode }) => {
                 Hi! I'm James, and I'm a Full-Stack Web Developer living in
                 Denver, Colorado. For most of the last decade, I've worked in
                 multiple casinos as a pit manager and table games dealer, where
-                I've learned to excell in any pace environment, and built a
+                I've learned to excel in any pace environment, and built a
                 foundation on team work and communication. When covid came, and
                 I lost my job, I decided to make the change I've always wanted.
                 And started my journey as a Web Developer.
