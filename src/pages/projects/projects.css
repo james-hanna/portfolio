@@ -188,4 +188,7 @@
     border-top: 3px solid grey;
     border-left: none;
   }
+  .full-size-img{
+    width: 100%;
+  }
 }

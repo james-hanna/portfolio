@@ -73,6 +73,10 @@ export const Arrow = styled.div`
       : css`
           left: 0%;
         `}
+  @media screen and (max-width: 425px){
+    height: 100%;
+    top: 50%;
+  }
 `;
 export const DarkArrow = styled.div`
   text-shadow: 1px 1px 1px #fff;
@@ -94,6 +98,10 @@ export const DarkArrow = styled.div`
       : css`
           left: 0%;
         `}
+  @media screen and (max-width: 425px){
+    height: 100%;
+    top: 50%;
+  }
 `;
 
 export const Dot = styled.span`
