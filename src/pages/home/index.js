@@ -54,9 +54,8 @@ const Home = ({ darkMode }) => {
               </div>
 
               <button onClick={() => gotItHandler()} className="got-it-button">
-                Nice Buttons!
                 <br />
-                (continue)
+                continue
               </button>
             </div>
           </div>

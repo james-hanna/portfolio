@@ -39,7 +39,7 @@ const Navbar = ({ setColor, color, darkMode, setDarkMode }) => {
 
   return (
     <>
-      <Nav visible={visible} darkMode={darkMode}>
+      <Nav visible={visible} darkmode={darkMode}>
         <Buttonz to="#">
           <img
             src={darkMode ? darkLogo : logo}
@@ -47,40 +47,36 @@ const Navbar = ({ setColor, color, darkMode, setDarkMode }) => {
             onClick={() => setDarkMode(!darkMode)}
           />
         </Buttonz>
-        <Bars onClick={() => setMnmo(!mnmo)} darkMode={darkMode} />
-        <NavMenu mnmo={mnmo} darkMode={darkMode}>
+        <Bars onClick={() => setMnmo(!mnmo)} darkmode={darkMode} />
+        <NavMenu mnmo={mnmo} darkmode={darkMode}>
           <NavLink
             to="/intro"
-            darkMode={darkMode}
+            darkmode={darkMode}
             color={color}
-            //activeStyle
             onClick={() => setMnmo(false)}
           >
             Who
           </NavLink>
           <NavLink
             to="/about"
-            darkMode={darkMode}
+            darkmode={darkMode}
             color={color}
-            //activeStyle
             onClick={() => setMnmo(false)}
           >
             Why
           </NavLink>
           <NavLink
             to="/projects"
-            darkMode={darkMode}
+            darkmode={darkMode}
             color={color}
-            //activeStyle
             onClick={() => setMnmo(false)}
           >
             What
           </NavLink>
           <NavLink
             to="/contact"
-            darkMode={darkMode}
+            darkmode={darkMode}
             color={color}
-            //activeStyle
             onClick={() => setMnmo(false)}
           >
             How
